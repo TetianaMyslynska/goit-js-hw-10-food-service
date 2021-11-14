@@ -8,7 +8,7 @@ const THEME = 'theme';
 const checkboxRef = document.querySelector('.theme-switch__toggle');
 
 function start() {
-  const theme = localStorage.getItem(THEME) ?? LIGHT;
+  const theme = localStorage.getItem(THEME) || LIGHT;
   updateBodyTheme(theme);
   checkboxRef.checked = theme === DARK;
 }
